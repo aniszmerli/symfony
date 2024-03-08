@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class SommeController extends AbstractController
 {
+    
     public function index(): Response
     {
         return $this->render('somme/index.html.twig', [

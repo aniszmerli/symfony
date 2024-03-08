@@ -6,13 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class DemoController extends AbstractController
+class SecondController extends AbstractController
 {
-   #[Route('/demo/{username}', name: 'user_name')]
-    public function index($username)
+    #[Route('/second', name: 'app_second')]
+    public function index(): Response
     {
-        return $this->render('demo/index.html.twig', [
-            'nom' => $username,
+        return $this->render('pages/second.html.twig', [
         ]);
     }
 }
